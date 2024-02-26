@@ -2,7 +2,7 @@
 body, html {
     background-color: #2d2d2d; /* Subdued background color */
     color: #ffffff;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, sans-serif font for body */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, sans-serif font for body */
     margin: 0;
     padding: 20px;
     text-align: center;
@@ -12,6 +12,7 @@ h2 {
     font-family: 'Georgia', serif; /* Classic, serif font for headings */
     color: #ffcc8f; /* Soft accent color for headings */
     margin-bottom: 30px;
+    font-size: 1.5em; /* Slightly larger for mobile readability */
 }
 
 #content {
@@ -21,24 +22,24 @@ h2 {
     margin: auto;
     padding: 20px;
     max-width: 600px;
+    width: 100%; /* Full width on mobile */
 }
 
 /* Activity Buttons */
 .activity-btn {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 300px;
+    justify-content: center; /* Centered button text and icons */
+    width: 90%; /* Optimized width for mobile */
     margin: 15px auto;
-    padding: 10px 20px;
+    padding: 12px; /* Increased padding for better touch target */
     background-color: #333333; /* Dark buttons for contrast */
     color: #ffffff;
-    border: 2px solid transparent; /* Prepare for hover state */
-    border-radius: 20px;
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 25px; /* Increased border radius for a pill shape */
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1em; /* Standard font size for readability */
+    transition: background-color 0.3s ease;
+    font-size: 1.1em; /* Increased font size for better readability */
 }
 
 .activity-btn:hover {
@@ -47,24 +48,22 @@ h2 {
 }
 
 .button-icon {
-    width: 24px; /* Subtle size for icons */
+    width: 35px; /* Adjusted size for icons */
     margin-right: 15px;
-    opacity: 0.9; /* Slightly transparent icons */
 }
 
 /* Time Buttons */
 .time-btn {
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 16px;
+    display: block; /* Full-width blocks for mobile */
+    margin: 10px auto; /* Centered with more space */
+    padding: 12px 20px; /* Larger padding for touch targets */
     background-color: #424242; /* Subtle contrast from the activity buttons */
     color: #ffffff;
-    border: none;
-    border-radius: 15px;
+    border-radius: 20px; /* Rounded corners for a softer look */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    font-size: 0.85em; /* Slightly smaller font size */
-    text-shadow: none; /* Remove text shadow for cleaner look */
+    transition: background-color 0.3s ease;
+    font-size: 1em; /* Maintain font size for time buttons */
+    text-align: center; /* Center text within the button */
 }
 
 .time-btn:hover {
@@ -72,39 +71,33 @@ h2 {
 }
 
 .time-btn.selected {
-    background-color: #ffcc8f; /* Use accent color for selected time */
-    color: #2d2d2d; /* Dark text for readability on light background */
+    background-color: #ffcc8f; /* Accent color for selected time */
+    color: #2d2d2d;
 }
 
 /* Selected state for activity and time buttons */
 .activity-btn.selected, .time-btn.selected {
-    background-color: #ffcc8f; /* Soft accent color for selected state */
-    color: #2d2d2d;
-    font-weight: bold; /* Make the selected option bold */
+    font-weight: bold;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Confirmation Message */
+.confirmation-message {
+    font-size: 1.2em; /* Larger font size for emphasis */
+    margin-top: 20px;
+    color: #ffcc8f; /* Accent color for visibility */
+}
+
+/* Responsive Adjustments for very small screens */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.3em; /* Adjust heading size for smaller screens */
+    }
+
     .activity-btn, .time-btn {
-        width: 90%;
-        margin: 10px auto; /* Center buttons with automatic margin */
+        width: 95%; /* Even wider buttons for very small screens */
     }
 
     .button-icon {
-        width: 30px; /* Larger icons for smaller screens */
+        width: 30px; /* Slightly smaller icons for very small screens */
     }
-
-    .activity-btn {
-        padding: 15px; /* Larger padding for touch targets on mobile */
-    }
-
-    .time-btn {
-        padding: 12px 20px; /* Adjust padding for better touch targets */
-    }
-}
-
-.confirmation-message {
-    font-size: 1.1em; /* Adjust the size as desired */
-    margin-top: 20px; /* Optional: Adds space above the message */
-    color: #ffcc8f; /* Optional: This will also set the color if you want to highlight the message */
 }
