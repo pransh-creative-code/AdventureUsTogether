@@ -78,6 +78,8 @@ h2 {
 /* Selected state for activity and time buttons */
 .activity-btn.selected, .time-btn.selected {
     font-weight: bold;
+    background-color: #ffcc8f;
+    color: #2d2d2d;
 }
 
 /* Confirmation Message */
@@ -105,4 +107,14 @@ h2 {
     .confirmation-message {
         font-size: 1.1em; /* Increased font size for the confirmation message */
     }
+}
+
+.time-btn,
+.activity-btn,
+.time-btn:focus,
+.activity-btn:focus,
+.time-btn:active,
+.activity-btn:active {
+    border: none;
+    outline: none;
 }
