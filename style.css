@@ -22,7 +22,7 @@ h2 {
     margin: auto;
     padding: 1.25em; /* Padding increased for larger touch targets */
     max-width: 37.5em; /* 600px equivalent */
-    width: 100%; /* Full width on mobile */
+    width: 90%; /* Full width on mobile */
 }
 
 /* Activity Buttons */
