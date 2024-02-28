@@ -12,10 +12,15 @@ body, html {
 
 /* Fix for iOS Safari to ensure content is centered */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    min-height: 100vh; /* Minimum height of viewport */
+    display: block; /* Change from flex to block */
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+/* Additional adjustment to ensure full coverage */
+html {
+    height: 100%; /* Full height for html to support body's full height */
 }
 
 h2 {
