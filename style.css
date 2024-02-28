@@ -6,6 +6,16 @@ body, html {
     margin: 0;
     padding: 1.25em; /* Increased from 20px */
     text-align: center;
+    height: 100%; /* Ensure full height */
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+/* Fix for iOS Safari to ensure content is centered */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh; /* Minimum height of viewport */
 }
 
 h2 {
@@ -22,7 +32,8 @@ h2 {
     margin: auto;
     padding: 1.25em; /* Padding increased for larger touch targets */
     max-width: 37.5em; /* 600px equivalent */
-    width: 90%; /* Full width on mobile */
+    width: 100%; /* Full width on mobile */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Activity Buttons */
