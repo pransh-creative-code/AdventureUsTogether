@@ -12,7 +12,7 @@ $(document).ready(function() {
         let timesHtml = `<h3>When Shall We Meet?</h3>`;
         
         const times = {
-            'Cafe': ['Friday Afternoon', 'Saturday Afternoon', 'Sunday Afternoon'],
+            'Cafe': ['Saturday Afternoon', 'Sunday Afternoon'],
             'Bar': ['Friday Evening', 'Saturday Evening', 'Sunday Evening'],
             'Hiking': ['Saturday Morning', 'Sunday Morning'],
             'Clubbing': ['Friday Night', 'Saturday Night'],
